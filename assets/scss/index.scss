@@ -1,0 +1,227 @@
+$vw: 3.75;
+
+body {
+  background-color: #f9fafb;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 (15vw / $vw);
+  width: 100%;
+  height: (52vw / $vw);
+  background-color: #fff;
+
+  // 左侧
+  .left {
+    width: (235vw / $vw);
+    height: (50vw / $vw);
+    background-image: url(../imgs/head.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  a {
+    width: (80vw / $vw);
+    height: (30vw / $vw);
+    text-align: center;
+    line-height: (30vw / $vw);
+    border-radius: (15vw / $vw);
+    font-size: (14vw / $vw);
+    background-color: #ffe31b;
+  }
+}
+
+.search {
+  padding: (10vw / $vw) (15vw / $vw);
+  height: (52vw / $vw);
+
+  .txt {
+    height: (32vw / $vw);
+    border-radius: (16vw / $vw);
+    text-align: center;
+    line-height: (32vw / $vw);
+    font-size: (14vw / $vw);
+    color: #a1a4b3;
+    background-color: #f2f4f5;
+
+    .search_for {
+      font-size: (16vw / $vw);
+    }
+  }
+}
+
+// banner
+.banner {
+  padding: 0 (15vw / $vw);
+  height: (128vw / $vw);
+
+  li {
+    width: (345vw / $vw);
+    height: (128vw / $vw);
+
+    img {
+      width: 100%;
+      height: 100%;
+      //  cover 缩放图片完全覆盖
+      // 缩放img 图片比例跟父级盒子比例不同 避免图片挤压变形
+      object-fit: cover;
+      border-radius: (5vw / $vw);
+    }
+  }
+}
+
+// 排行榜
+.list {
+  margin-top: (20vw / $vw);
+  padding: 0 (15vw / $vw);
+
+  // 内容
+  li {
+    display: flex;
+    margin-bottom: (16vw / $vw);
+    height: 105vw / $vw;
+    background-color: #fff;
+    border-radius: (10vw / $vw);
+
+    .pic {
+      margin-right: (20vw / $vw);
+      // background-color: skyblue;
+
+      img {
+        width: (105vw / $vw);
+        height: (105vw / $vw);
+        border-radius: (10vw / $vw);
+        object-fit: cover;
+      }
+    }
+
+    .txt {
+      .more {
+        font-size: (14vw / $vw);
+        color: #333;
+
+        .more_1 {
+          font-size: (16vw / $vw);
+        }
+      }
+
+      a {
+        display: block;
+        font-size: (12vw / $vw);
+        line-height: 1.8;
+        color: #a1a4b3;
+      }
+    }
+  }
+}
+
+// 标题--公共样式
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: (16vw / $vw);
+  line-height: (25vw / $vw);
+
+  h4 {
+    font-size: (20vw / $vw);
+  }
+
+  a {
+    font-size: (12vw / $vw);
+    color: #a1a4b3;
+  }
+}
+
+// 推荐歌单
+.recommend {
+  margin-top: (20vw / $vw);
+  padding: 0 (15vw / $vw);
+
+  // 内容
+  ul {
+    display: flex;
+    // 换行
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+      margin-bottom: (16vw / $vw);
+      width: (105vw / $vw);
+      height: (143vw / $vw);
+
+      // 图片
+      .pic {
+        position: relative;
+        width: (105vw / $vw);
+        height: (105vw / $vw);
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: (10vw / $vw);
+          object-fit: cover;
+        }
+
+        // 播放量
+        .cover {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: (70vw / $vw);
+          height: (28vw / $vw);
+          font-size: (14vw / $vw);
+          text-align: center;
+          line-height: (28vw / $vw);
+          border-radius: 0 (10vw / $vw);
+          color: #fff;
+          background-color: rgba($color: #000000, $alpha: 0.7);
+        }
+      }
+
+      // 文字
+      .txt {
+        font-size: (14vw / $vw);
+      }
+    }
+  }
+}
+
+// 下载
+.download {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  left: (15vw / $vw);
+  bottom: (30vw / $vw);
+  padding: 0 (10vw / $vw) 0 (15vw / $vw);
+  width: (345vw / $vw);
+  height: (45vw / $vw);
+  border-radius: (22vw / $vw);
+  background-color: #fff;
+
+  img {
+    margin-right: (10vw / $vw);
+    width: (36vw / $vw);
+    height: (36vw / $vw);
+  }
+
+  p {
+    flex: 1;
+    font-size: (14vw / $vw);
+  }
+
+  .more {
+    width: (32vw / $vw);
+    height: (32vw / $vw);
+    font-size: (16vw / $vw);
+    text-align: center;
+    line-height: (32vw / $vw);
+    border-radius: (21vw / $vw);
+    background-color: #f2f3f5;
+  }
+}
